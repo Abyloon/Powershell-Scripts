@@ -1,6 +1,8 @@
-#Note, please replace anytime @domain.com or @email.com is mentioned to what it should be.
-#commands will apply to O365 directly. If a system applied on premises and on cloud.
-#For example, a user should be created on-premises. It will be created on prem/
+<#Note, please replace anytime @domain.com or @email.com is mentioned to what it should be.
+commands will apply to O365 directly. If a system applied on premises and on cloud.
+For example, a user should be created on-premises. It will be created on prem
+Additional information will be provided at a later date.
+#>
 
 #List a specific user permissions such as SendAs
 Get-RecipientPermission -Trustee "user@email.com"
