@@ -1,7 +1,7 @@
 <# Second draft Script
-Author Helen Najar #>
+Author Helen Najar ##>
 
-# Active Directory
+# Active Director
 Import-Module ActiveDirectory
 
 # Arrays for the script
