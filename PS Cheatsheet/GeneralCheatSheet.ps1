@@ -97,11 +97,10 @@ GET-ADComputer -Properties Description -Filter * -SearchBase "ou=PCs,dc=star,dc=
 # Example: $SharedPathArray = 'C:\Windows', 'C:\Users' 
 # Delimited by Pipe Symbol "|" 
 $SharedPathArray = '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[ABSOLUTE PATH]' 
-(Get-ChildItem -Directory -literalPath $SharedPathArray -recurse | ForEach-Object {Get-Acl $_.FullName} | Select PSChildName, Owner, Group -expand Access | Export-Csv "[PATH TO DESTINATION.csv]" 
-Import-Csv -path "[PATH TO NON CSV FILE WITH DIMITERS.txt]" -Delimiter "|" | Export-Csv "[PATH TO DESTINATION.csv]
+(Get-ChildItem -Directory -literalPath $SharedPathArray -recurse | ForEach-Object {Get-Acl $_.FullName} | Select PSChildName, Owner, Group -expand Access | Export-Csv "[PATH TO DESTINATION.csv]"`
+Import-Csv -path "[PATH TO NON CSV FILE WITH DIMITERS.txt]" -Delimiter "|" | Export-Csv "[PATH TO DESTINATION.csv]"
 
-
-'''Drive Space Clearing:'''
+#Drive Space Clearing:
 <# Use the drive script
 ONLY if the script is encountering errors use this command before attempting to run the script again: #>
 set-executionpolicy undefined -scope currentuser
@@ -143,3 +142,21 @@ restart-service nsclientpp -Force
  
 #SERVICE LOCATOR 
 IF ($OSProcess = Get-WmiObject win32_service | ?{$_.pathname -like '*lmgrd*'} | select Name, DisplayName, State, PathName) {$OSProcess} Else {Write-Host 'No service found matching your keyword in the executable path of the service'} 
+
+#Extra web - commands 
+#Past the following before
+<details><p><summary>Knowledge article <- Click to open</summary>
+ 
+</p></details>[/code]
+Reinstall SNMP:
+Import-Module ServerManager
+add-windowsfeature snmp-service
+Install-WindowsFeature RSAT-SNMP 
+
+<#or
+1. Go into Control Panel and select “Turn Windows features on or off” under Programs.
+2. Click the “Next” button several times until you get to the “Select Features” screen.
+3. Expand “Remote Server Administration Tools->Feature Administration Tools” and check “SNMP Tools”.
+4. Click “Install.” 
+then usually have to log off for the security tab to show up
+#>
