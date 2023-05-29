@@ -101,35 +101,45 @@ $SharedPathArray = '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[ABSOLUTE PATH]', '[AB
 Import-Csv -path "[PATH TO NON CSV FILE WITH DIMITERS.txt]" -Delimiter "|" | Export-Csv "[PATH TO DESTINATION.csv]
 
 
-Drive Space Clearing:
-Use the drive script
-ONLY if the script is encountering errors use this command before attempting to run the script again:
-
+'''Drive Space Clearing:'''
+<# Use the drive script
+ONLY if the script is encountering errors use this command before attempting to run the script again: #>
 set-executionpolicy undefined -scope currentuser
-To empty recycle bin
-rd /s c:\$recycle.bin - command prompt admin
- 
-To empty MSOcache
-rd /s c:\MSOcache   - command prompt admin
-Services
-Basic restart service
+#To empty recycle bin
+rd /s c:\$recycle.bin # command prompt admin
+#To empty MSOcache
+rd /s c:\MSOcache   # command prompt admin
+
+'''Services'''
+#Basic restart service
 restart nsclientpp service
 
-Remotely start service:
+#Remotely start service:
 Get-Service -Name [service] -ComputerName [ComputerName] | Start-service
-Displays service status: 
-sc queryex [Service Name]
- 
-Shows friendly name:
+#Displays service status: 
+sc queryex [Service Name] 
+# Shows friendly name:
 Get-display name [service name]
-Start a service:
+# Start a service:
 Start-services *name*
-Restart a service
+# Restart a service
 Restart-services *name*
-Stop a service
+# Stop a service
 Stop-services *name*
-Kill service: 
+# Kill service: 
 taskkill /f /pid 772
-To Review all Services commands and what can be done:
+# To Review all Services commands and what can be done:
 get-help Get-Service
  
+# Other services command and Exaple:
+cd C:\windows\system32
+lodctr /R
+cd C:\windows\syswow64
+lodctr /R
+winmgmt /resyncperf
+restart-service winmgmt -Force
+restart-service SNMP -Force
+restart-service nsclientpp -Force
+ 
+#SERVICE LOCATOR 
+IF ($OSProcess = Get-WmiObject win32_service | ?{$_.pathname -like '*lmgrd*'} | select Name, DisplayName, State, PathName) {$OSProcess} Else {Write-Host 'No service found matching your keyword in the executable path of the service'} 
