@@ -8,7 +8,7 @@ Additional information will be provided at a later date.
 Get-RecipientPermission -Trustee "user@email.com"
  
 #List all members full access to the sharedmailbox
-Get-MailboxPermission -Identity john@contoso.com 
+Get-MailboxPermission -Identity SharedMailbox@email.com 
  
 #List all members who have permission to a SharedMailbox
 Get-RecipientPermission "SharedMailbox@domain.com"
