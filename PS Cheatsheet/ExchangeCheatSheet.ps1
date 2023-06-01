@@ -59,5 +59,5 @@ Get-Mailbox <The mailbox> | Select *forward*
 #Set forwarding Regular
 Set-Mailbox <mailbox> -ForwardingAddress <Mailbox forward to?> -DeliverToMailboxAndForward $true
  
-#Set SMTP
+#Set SMTP Forwarding
 Set-Mailbox <From> -ForwardingSMTPAddress <Mailbox forward to?>  -DeliverToMailboxAndForward $True
