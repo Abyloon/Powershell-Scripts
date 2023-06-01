@@ -1,8 +1,17 @@
-<#Note, please replace anytime @domain.com or @email.com is mentioned to what it should be.
-commands will apply to O365 directly. If a system applied on premises and on cloud.
-For example, a user should be created on-premises. It will be created on prem
-Additional information will be provided at a later date.
+<#
+Note, please replace anytime @domain.com or @email.com is mentioned to what it should be.
+commands will apply to O365 directly. If a system applied on premises and on cloud, then a user should be created on-premises. Then, it will sync over to O365.
+The sync usually takes about 30 Minutes give or take depending on the load.
+The difference of the commands mostly adding "Remote" such as:
+> On-premises: New-RemoteMailbox or Set-RemoteMailbox
+> On Cloud directly: New-Mailbox or Set-Mailbox
 #>
+
+'''Creation of new mailbox on-premises'''
+#Example of Active Directory account already exits, but no email:
+Enable-RemoteMailbox abyloon@domain.com ‑RemoteRoutingAddress abyloon@365domain.mail.onmicrosoft.com
+#Creation of email with AD Creation:
+New-RemoteMailbox ‑Name "<Firstname Lastname>" ‑Password "<password>" ‑UserPrincipalName abyloon@domain.com ‑OnPremisesOrganizationalUnit "domain.local/Users"
 
 #List a specific user permissions such as SendAs
 Get-RecipientPermission -Trustee "user@email.com"
