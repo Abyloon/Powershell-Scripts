@@ -25,6 +25,6 @@ Set-ADUser $Username -ChangePasswordAtLogon $False
 Set-ADUser $Username -EmailAddress "$Username@domain.com"
 
 # Finds all the AD-groups that the "$ADGroups" user you entered is a part of and adds it to the new user automatically.
-Get-ADPrincipalGroupMembership -Identity $ADgroups | select SamAccountName | ForEach-Object {Add-ADGroupMember -Identity $_.SamAccountName -Members  $Username }
+Get-ADPrincipalGroupMembership -Identity $ADgroups | Select-Object SamAccountName | ForEach-Object {Add-ADGroupMember -Identity $_.SamAccountName -Members  $Username }
 
 Write-Host -BackgroundColor DarkGreen "Active Directory user account setup complete!"
