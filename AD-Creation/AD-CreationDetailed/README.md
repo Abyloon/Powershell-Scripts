@@ -115,4 +115,4 @@ Feel free to open issues or submit pull requests for enhancements or bug fixes.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/Abyloon/Powershell-Scripts/blob/main/LICENSE.md).

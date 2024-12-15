@@ -120,5 +120,5 @@ This cheatsheet is provided as-is and should be tested in a controlled environme
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/Abyloon/Powershell-Scripts/blob/main/LICENSE.md).
 ```
