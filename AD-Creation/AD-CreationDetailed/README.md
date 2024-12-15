@@ -37,7 +37,7 @@ This PowerShell script automates the process of creating new users in Active Dir
 ## Installation
 
 1. Clone or download this repository.
-2. Save the `AD_Account_Creation.ps1` script to a secure location accessible to your administrative account.
+2. Save the `AD-Creation.ps1` script to a secure location accessible to your administrative account.
 3. Ensure you have the necessary permissions to execute PowerShell scripts on your system.
 
 ---
@@ -49,7 +49,7 @@ This PowerShell script automates the process of creating new users in Active Dir
 3. Run the script using the following command:
 
    ```powershell
-   .\AD_Account_Creation.ps1
+   .\AD-Creation.ps1
    ```
 
 4. Follow the prompts to input user details:
