@@ -9,7 +9,7 @@ Import-Module ActiveDirectory
 Write-Host "`n==============================================================" -ForegroundColor Yellow
 Write-Host " Welcome to the Creating New Users in Active Directory script " -ForegroundColor Green
 Write-Host "==============================================================" -ForegroundColor Yellow
-Write-Host "                 Environment Script Launched                  " -ForegroundColor Green
+Write-Host "           SkyStar Environment Script Launched                " -ForegroundColor Green
 Write-Host "==============================================================" -ForegroundColor Yellow
 Write-Host "`n"
 
