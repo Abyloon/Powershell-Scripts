@@ -199,7 +199,7 @@ function CreateSTAREmp {
     $mgrexist1 = $mgrexist.SamAccountName
     write-host "Gathered Manager info." -ForegroundColor Cyan
 
-    $company = "United Road Services, Inc."
+    $company = "SkyStar"
     $fInitial = $firstname.Substring(0, 1).ToUpper()
     $lInitial = $lastname.Substring(0, 1).ToUpper()
     $init = $fInitial + $lInitial
@@ -339,7 +339,7 @@ function CreateSTARCont {
     $mgrexist1 = $mgrexist.SamAccountName
     write-host "Gathered Manager info." -ForegroundColor Cyan
 
-    $company = "United Road Services, Inc."
+    $company = "SkyStar"
     $fInitial = $firstname.Substring(0, 1).ToUpper()
     $lInitial = $lastname.Substring(0, 1).ToUpper()
     $init = $fInitial + $lInitial
