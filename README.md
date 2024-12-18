@@ -14,16 +14,6 @@ I maintain a clean and organized **PowerShell-Scripts** directory, ensuring clea
 **Directory Overview:**
 ```
 PowerShell-Scripts/
-├── Exchange-Scripts/
-│   ├── ExchangeOnlineManagement/
-│   │   ├── ExchangeOnlineManagement.ps1
-│   │   └── README.md
-│   └── HybridMigration/
-│       ├── migration-logs/ (includes .gitkeep and README.md to explain logs)
-│       ├── sample-migration.csv (demonstrates the CSV format for migrations)
-│       ├── sample-migration-logs.txt (example log output for reference)
-│       ├── HybridMigration.ps1 (automates hybrid migration process)
-│       └── README.md (explains migration workflow and usage)
 ├── AD-Creation/
 │   ├── AD-Creation-Basic/
 │   │   ├── AD-Creation-Basic.ps1
@@ -38,6 +28,16 @@ PowerShell-Scripts/
 ├── AD-Termination/
 │   ├── AD-Termination.ps1
 │   └── README.md
+├── Exchange-Scripts/
+│   ├── ExchangeOnlineManagement/
+│   │   ├── ExchangeOnlineManagement.ps1
+│   │   └── README.md
+│   └── HybridMigration/
+│       ├── migration-logs/ (includes .gitkeep and README.md to explain logs)
+│       ├── sample-migration.csv (demonstrates the CSV format for migrations)
+│       ├── sample-migration-logs.txt (example log output for reference)
+│       ├── HybridMigration.ps1 (automates hybrid migration process)
+│       └── README.md (explains migration workflow and usage)
 ├── PS-Cheatsheet/
 │   ├── Exchange-Cheatsheet/
 │   │   ├── Exchange-Cheatsheet.ps1
