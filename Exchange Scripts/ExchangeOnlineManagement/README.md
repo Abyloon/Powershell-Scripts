@@ -1,6 +1,3 @@
-Below is a sample **README.md** file tailored to the refined script you provided. Adjust any details as needed for your specific environment:
-
-```markdown
 # Microsoft Exchange Online PowerShell Script
 
 ## Overview
