@@ -63,12 +63,12 @@ PowerShell-Scripts/
   - Uses dynamic input validation to prevent misconfiguration.
   - Outputs key information about user accounts, including usernames, display names, and assigned groups.
 
-### **Hybrid Exchange Migration Tool**
-- **Purpose:** Fully automates the process of migrating mailboxes from on-premises Exchange to Office 365 via hybrid migration.
-- **Impact:** Reduces manual effort, tracks migration progress, and outputs logs for auditability.
+### **Hybrid Exchange Migration Demonstration**
+- **Purpose:** Demonstrates knowledge of migrating mailboxes from on-premises Exchange to Office 365 via hybrid migration.
+- **Impact:** Showcases skills in endpoint creation, migration batch creation, and PowerShell scripting for hybrid migrations.
 - **Key Features:**
-  - Creates endpoints, batches, and manages the entire migration lifecycle.
-  - Logs migration status, progress, and error information to the **migration-logs** folder.
+  - Demonstrates the use of PowerShell to create endpoints, batches, and manage the migration lifecycle.
+  - Shows how to log migration status, progress, and error information in the **migration-logs** folder.
   - Ensures privacy and compliance by excluding **real data** from GitHub using `.gitignore`.
 
 ### **Exchange_Management_Tool**
