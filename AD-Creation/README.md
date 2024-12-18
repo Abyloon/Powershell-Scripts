@@ -1,8 +1,4 @@
-Below is a sample **README.md** for the `AD-Creation` folder. Adjust details as needed for your actual scripts and environment.
-
-```markdown
 # AD-Creation
-
 ## Overview
 
 The **AD-Creation** folder contains a collection of PowerShell scripts designed to streamline the process of creating and configuring Active Directory (AD) user accounts. These scripts cater to a variety of scenarios, from simple account setups to more complex hybrid configurations integrating with Office 365.

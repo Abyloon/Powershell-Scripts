@@ -1,6 +1,3 @@
-Below is the updated **README.md** with your requested changes:
-
-```markdown
 # AD-ExchangeHybrid-UserCreation.ps1
 
 ## Overview

@@ -1,5 +1,3 @@
----
-
 # Active Directory User Creation Script
 
 ## Overview
