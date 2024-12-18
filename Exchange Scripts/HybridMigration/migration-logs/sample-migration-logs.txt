@@ -1,0 +1,8 @@
+[2024-12-18 10:30:45] INFO: Migration batch 'Batch_01' started successfully.
+[2024-12-18 10:31:12] INFO: Connecting to Exchange Online as admin@example.com
+[2024-12-18 10:33:27] INFO: Migration Endpoint created successfully.
+[2024-12-18 10:45:02] INFO: Starting migration batch for 3 mailboxes.
+[2024-12-18 10:50:14] INFO: Migrating 'user1@example.com' - Status: In Progress (25% complete)
+[2024-12-18 11:00:23] INFO: Migrating 'user2@example.com' - Status: In Progress (50% complete)
+[2024-12-18 11:15:35] ERROR: Failed to migrate 'user3@example.com' - Reason: Timeout while connecting to mailbox.
+[2024-12-18 11:20:10] INFO: Migration batch 'Batch_01' completed. 2/3 mailboxes successfully migrated.

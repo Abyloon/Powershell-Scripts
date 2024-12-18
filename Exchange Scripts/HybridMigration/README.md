@@ -3,6 +3,8 @@
 ## **Description**
 This PowerShell script automates the migration of on-premises Exchange mailboxes to Office 365 using the hybrid migration approach.
 
+**Note:** The domain (like `skystar.com`), email addresses, and server names (like `SKY-EXCHP01`) are placeholders and should be replaced with the correct values for your organization
+
 ## **Features**
 - Connects to Exchange Online and On-Prem Exchange.
 - Creates a migration endpoint.
@@ -40,3 +42,4 @@ user2@skystar.com
 2. The script will prompt for your admin credentials.
 
 ## **License**
+This project is licensed under the [MIT License](https://github.com/Abyloon/Powershell-Scripts/blob/main/LICENSE.md).

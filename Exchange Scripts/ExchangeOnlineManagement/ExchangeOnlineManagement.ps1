@@ -19,7 +19,7 @@ Connect-ExchangeOnline
 $domainSuffix = "@skystar.com"
 
 # Function to validate a username (general user)
-function Validate-Username {
+function ValidateUsername {
     param(
         [string]$Username
     )
@@ -45,7 +45,7 @@ function Validate-Username {
 }
 
 # Function to validate a shared mailbox username
-function Validate-SharedUsername {
+function ValidateSharedUsername {
     param(
         [string]$SharedUsername
     )
@@ -90,9 +90,9 @@ do {
         # Full Access
         '1' {
             Write-Host "Enter End-User Username" -ForegroundColor Magenta -NoNewline
-            $Username = Validate-Username (Read-Host -Prompt " ")
+            $Username = ValidateUsername (Read-Host -Prompt " ")
             Write-Host "Enter SharedMailbox Username" -ForegroundColor Magenta -NoNewline
-            $Sharedusername = Validate-SharedUsername (Read-Host -Prompt " ")
+            $Sharedusername = ValidateSharedUsername (Read-Host -Prompt " ")
             Write-Host "Granting Full Access..." -ForegroundColor Green
             $sharedmailbox = $Sharedusername + $domainSuffix
             $Email = $Username + $domainSuffix
@@ -104,35 +104,35 @@ do {
         # SendAs
         '2' {
             Write-Host "Enter End-User Username" -ForegroundColor Magenta -NoNewline
-            $Username = Validate-Username (Read-Host -Prompt " ")
+            $Username = ValidateUsername (Read-Host -Prompt " ")
             Write-Host "Enter SharedMailbox Username" -ForegroundColor Magenta -NoNewline
-            $Sharedusername = Validate-SharedUsername (Read-Host -Prompt " ")
+            $Sharedusername = ValidateSharedUsername (Read-Host -Prompt " ")
             Write-Host "Granting SendAs Access..." -ForegroundColor Green
             $sharedmailbox = $Sharedusername + $domainSuffix
             $Email = $Username + $domainSuffix
             Add-RecipientPermission $sharedmailbox -AccessRights SendAs -Trustee $Email
             Write-Host "SendAs granted for $Email" -ForegroundColor Cyan
-            Get-RecipientPermission $sharedmailbox | Select Trustee, AccessControlType, AccessRights
+            Get-RecipientPermission $sharedmailbox | Select-Object Trustee, AccessControlType, AccessRights
         }
 
         # SendOnBehalf
         '3' {
             Write-Host "Enter End-User Username" -ForegroundColor Magenta -NoNewline
-            $Username = Validate-Username (Read-Host -Prompt " ")
+            $Username = ValidateUsername (Read-Host -Prompt " ")
             Write-Host "Enter SharedMailbox Username" -ForegroundColor Magenta -NoNewline
-            $Sharedusername = Validate-SharedUsername (Read-Host -Prompt " ")
+            $Sharedusername = ValidateSharedUsername (Read-Host -Prompt " ")
             Write-Host "Granting SendOnBehalf..." -ForegroundColor Green
             $sharedmailbox = $Sharedusername + $domainSuffix
             $Email = $Username + $domainSuffix
             Set-Mailbox $sharedmailbox -GrantSendOnBehalfTo @{Add="$Email"}
             Write-Host "SendOnBehalf granted for $Email" -ForegroundColor Cyan
-            Get-Mailbox $sharedmailbox | Select Name,Alias,UserPrincipalName,PrimarySmtpAddress,@{l='SendOnBehalfOf';e={$_.GrantSendOnBehalfTo -join ";"}}
+            Get-Mailbox $sharedmailbox | Select-Object Name,Alias,UserPrincipalName,PrimarySmtpAddress,@{l='SendOnBehalfOf';e={$_.GrantSendOnBehalfTo -join ";"}}
         }
 
         # Configure Out of Office
         '4' {
             Write-Host "Enter End-User Username" -ForegroundColor Magenta -NoNewline
-            $Username = Validate-Username (Read-Host -Prompt " ")
+            $Username = ValidateUsername (Read-Host -Prompt " ")
             Write-Host "Configuring OutOfOffice..." -ForegroundColor Green
             Write-Host "Enter the Out of Office Message" -ForegroundColor Magenta -NoNewline
             $Message = Read-Host -Prompt " "
@@ -148,7 +148,7 @@ do {
         # Forward Requests
         '5' {
             Write-Host "Enter End-User Username" -ForegroundColor Magenta -NoNewline
-            $Username = Validate-Username (Read-Host -Prompt " ")
+            $Username = ValidateUsername (Read-Host -Prompt " ")
             $Email = $Username + $domainSuffix
 
             Write-Host "Please Choose from the Options below" -ForegroundColor Magenta
@@ -165,7 +165,7 @@ do {
 
             if ($Optionforward -eq '1') {
                 Write-Host "Enter Forward To Username" -ForegroundColor Magenta -NoNewline
-                $ForwardUser = Validate-Username (Read-Host -Prompt " ")
+                $ForwardUser = ValidateUsername (Read-Host -Prompt " ")
                 $forwardMailbox = $ForwardUser + $domainSuffix
                 Set-Mailbox $Email -ForwardingAddress $forwardMailbox -DeliverToMailboxAndForward $true
                 Write-Host "Forwarding set for $Email to $forwardMailbox" -ForegroundColor Cyan

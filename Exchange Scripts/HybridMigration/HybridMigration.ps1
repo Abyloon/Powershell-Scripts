@@ -7,7 +7,6 @@
 # --------------------------------------------
 $ExchangeServer = "SKY-EXCHP01"                # Name of the on-prem Exchange server
 $TenantAdmin = "admin@skystar.onmicrosoft.com"  # Office 365 admin account
-#$OnPremAdmin = "premadmin@skystar.com"        # On-Prem Exchange admin account
 $Password = ConvertTo-SecureString "YourSecurePasswordHere" -AsPlainText -Force
 $MigrationBatchName = "HybridMigrationBatch"       # Name of the migration batch
 $MigrationCSVPath = "C:\Migration\migration.csv"   # CSV file with user mailboxes to migrate
