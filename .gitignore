@@ -1,0 +1,112 @@
+# ====================================
+# Custom .gitignore for O365 Hybrid Migration Project
+# ====================================
+
+# === Migration-Specific Files ===
+*.csv                 # Migration CSV files (contains user email data)
+migration.csv         # Specific migration CSV file
+migration*.csv        # Any files starting with "migration"
+*.bak                 # Backup files for scripts and other files
+*.log                 # Log files (may contain sensitive migration info)
+*.tmp                 # Temporary files
+*.old                 # Old versions of files (commonly created during editing)
+*.sav                 # Save or checkpoint files from IDEs
+
+# === PowerShell Scripts ===
+*.ps1.bak             # Backup versions of PowerShell scripts
+*.ps1~                # Temporary versions of PowerShell scripts
+*.ps1.swp             # Swap files created by editors like Vim
+
+# === Credential and Secrets ===
+credentials.txt       # Credentials file (DO NOT TRACK THIS FILE)
+*.env                 # Environment variable files (may contain secrets)
+*.key                 # Private keys (SSL, certificates, etc.)
+*.pfx                 # PKCS12 certificates (NEVER expose these)
+*.pem                 # Private key files
+*.cer                 # Certificate files (often contain public certs)
+*.crt                 # Certificate files (may contain sensitive info)
+secrets.yml           # YAML file for secrets (common in CI/CD)
+
+# === Operating System Files ===
+.DS_Store             # macOS Finder metadata files
+Thumbs.db             # Windows image cache files
+desktop.ini           # Windows system configuration files
+
+# === Editor and Development-Specific Files ===
+.vscode/              # Visual Studio Code settings
+.idea/                # JetBrains IDE settings (PyCharm, WebStorm, etc.)
+*.swp                 # Swap files created by editors like Vim
+*.swo                 # Backup files created by editors like Vim
+*.code-workspace      # Visual Studio Code workspace files
+*.iml                 # IntelliJ module files
+
+# === Python Development (if applicable) ===
+__pycache__/          # Python cache folder
+*.pyc                 # Compiled Python files
+*.pyo                 # Compiled optimized Python files
+*.pyd                 # Compiled Python files for Windows
+venv/                 # Python virtual environment folder
+
+# === Node.js (if applicable) ===
+node_modules/         # Node.js dependencies folder
+npm-debug.log         # NPM debug log file
+
+# === Git-Specific Ignore Files ===
+*.orig                # Merge conflict resolution files
+*.rej                 # Rejected patch files from "git apply"
+*.patch               # Patch files
+
+# === Backup, Temp, and System Files ===
+*.backup              # Files that end with ".backup" 
+*.swp                 # Swap files from editors
+*.swo                 # Swap files from editors
+*.tmp                 # Temporary files
+*.temp                # Temporary files
+*.cache               # Cache files
+*.bak                 # Backup files for any type of file
+*.old                 # Old files (commonly created as backups)
+*.zip                 # Zip files (optional, depends on your workflow)
+*.tar.gz              # Tarball files
+*.7z                  # 7z archive files
+
+# === CI/CD and Build Tools ===
+coverage/             # Coverage reports (if you use pytest, jest, etc.)
+.nyc_output/          # Code coverage files
+dist/                 # Distribution files (if you package the project)
+build/                # Build folders for compiled files
+*.log                 # Log files from scripts or processes
+output/               # Output files from builds or testing
+error.log             # Error log files
+test-results/         # Test result files from CI/CD
+
+# === Remote Desktop & RDP Related ===
+*.rdp                 # RDP connection files (do not expose)
+*.rdg                 # Remote Desktop Group files (may have IPs)
+
+# === System Specific (macOS, Windows, Linux) ===
+# macOS
+.DS_Store             # macOS metadata files
+.AppleDouble          # macOS metadata files
+.AppleDesktop         # macOS desktop services files
+.apdisk               # Apple disk utility file
+# Windows
+Thumbs.db             # Windows thumbnail cache files
+desktop.ini           # Windows system configuration file
+# Linux
+*.pid                 # Process ID files
+*.pid.lock            # Process lock files
+*~                    # Files ending with "~" (editor temp files)
+
+# === Large/Heavy Files (Optional) ===
+*.iso                 # ISO files (typically large)
+*.dmg                 # macOS disk images (can be large)
+*.exe                 # Executables
+*.msi                 # Installer files for Windows
+
+# === Miscellaneous ===
+*.pdf                 # PDF files (only if not relevant for Git repo)
+*.docx                # Word documents (if used locally, not in Git)
+*.xlsx                # Excel spreadsheets (only if they don't need to be shared)
+*.pptx                # PowerPoint presentations
+*.tmp                 # Temporary files of any kind
+*.lock                # Lock files (common for dependencies)
