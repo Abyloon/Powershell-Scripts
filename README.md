@@ -55,7 +55,7 @@ PowerShell-Scripts/
 
 ## **Featured Projects**
 
-### **AD_User_Creation_Script**
+### **AD User Creation Script**
 - **Purpose:** Automates the entire user onboarding process in Active Directory, including group memberships, email provisioning, and attribute configuration.
 - **Impact:** Ensures quick, consistent, and secure account provisioning while maintaining compliance with security policies.
 - **Key Features:**
@@ -71,7 +71,7 @@ PowerShell-Scripts/
   - Shows how to log migration status, progress, and error information in the **migration-logs** folder.
   - Ensures privacy and compliance by excluding **real data** from GitHub using `.gitignore`.
 
-### **Exchange_Management_Tool**
+### **Exchange Management Tool**
 - **Purpose:** Simplifies mailbox creation, configuration, and remote mailbox management in hybrid Exchange Online environments.
 - **Impact:** Reduces manual overhead and enhances mailbox lifecycle management.
 - **Key Features:**
@@ -79,7 +79,7 @@ PowerShell-Scripts/
   - Handles permissions like **Send As**, **Full Access**, and **Send on Behalf** assignments.
   - Leverages **dynamic prompts** and **error handling** to ensure smooth execution.
 
-### **PowerShell_Cheatsheet**
+### **PowerShell Cheatsheet**
 - **Purpose:** A curated reference of essential PowerShell commands and scripts, helping teams troubleshoot networks, manage systems, and enforce security policies.
 - **Impact:** Accelerates incident response, network diagnostics, and automation workflows.
 - **Key Features:**
